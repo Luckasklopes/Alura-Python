@@ -1,30 +1,4 @@
-import os
-
-# 1
-print("Python na escola de programação da Alura.")
-
-# 2
-nome = "Lucas"
-idade = 19
-print(f"Meu nome é {nome} e tenho {idade} anos")
-
-# 3
-print("""
-        A
-        L
-        U
-        R
-        A
-""")
-
-# 4
-pi = 3.141592
-print(f"O valor arredondado de pi é {pi:.2f}")
-
-input("")
-os.system("cls")
-
-#5
+#1
 valor = int(input("digite um numero..: "))
 
 if valor == 0:
@@ -34,7 +8,7 @@ elif valor % 2 == 0:
 else:
     print(f"o numero {valor} é impar")
 
-#6
+#2
 idade = int(input("digite sua idade..: "))
 
 if idade < 0:
@@ -46,7 +20,7 @@ elif idade <= 18:
 else:
     print(f"com {idade} anos você ja é um adulto")
 
-#7
+#3
 email = "zezinho@gmail.com"
 senha = "teste123123"
 
@@ -61,7 +35,7 @@ if email_digitado == email:
 else:
     print("email incorreto")
 
-#8
+#4
 x = int(input("digite as cordenadas x..: "))
 y = int(input("digite as cordenadas y..: "))
 if x > 0 and y > 0:
