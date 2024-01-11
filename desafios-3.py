@@ -44,7 +44,12 @@ except Exception as e:
 q_quinze = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 soma = 0
 qnt = 0
-for valores in q_quinze:
-    soma += valores
-    qnt += 1
-print("A média dos pares de 0 a 20 é ", int(soma/qnt))
+try:
+    for valores in q_quinze:
+        soma += valores
+        qnt += 1
+    print("A média dos pares de 0 a 20 é ", int(soma/qnt))
+except ZeroDivisionError:
+    print("A lista está vazia, não é possivel calcular a média")
+except Exception as e:
+    print(f"Ocorreu um erro: {e}")
