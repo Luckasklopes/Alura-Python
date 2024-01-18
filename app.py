@@ -7,6 +7,7 @@ restaurantes = [{'nome':"Rio's", 'categoria':"pizza", 'ativo':True},
 
 
 def exibir_logo():
+    """Essa função exibe a logo do aplicativo"""
     print(""""
         ░██████╗░█████╗░██████╗░░█████╗░██████╗░  ███████╗██╗░░██╗██████╗░██████╗░███████╗░██████╗░██████╗
         ██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗  ██╔════╝╚██╗██╔╝██╔══██╗██╔══██╗██╔════╝██╔════╝██╔════╝
@@ -18,21 +19,31 @@ def exibir_logo():
 
 
 def voltar_menu():
+    """Essa função sempre retorna ao menu inicial"""
     input("\n\ndigite qualquer tecla para voltar ")
     main()
 
 
 def finalizar_app():
+    """Essa função fecha o app"""
     os.system("cls")
     print("aplicativo finalizado\n")
 
 
 def opcao_invalida():
+    """Essa função é executada ao tentar entrar uma opção invalida no menu"""
     print("opção invalida")
     voltar_menu()
 
 
 def subtitulo(subtitulo):
+    """Essa função é responsavel por exibir o subtitulo do menu atual
+    Input:
+    - nome do submenu
+    
+    Output:
+    - submenu na tela com *
+    """
     os.system("cls")
     linha = "*" * len(subtitulo)
     print(subtitulo)
@@ -41,6 +52,7 @@ def subtitulo(subtitulo):
 
 
 def exibir_opcoes():
+    """Essa função exibe as opções do menu inicial"""
     print("1. Cadastrar restaurante")
     print("2. Listar restaurantes")
     print("3. Alternar estado do  restaurante")
@@ -48,6 +60,14 @@ def exibir_opcoes():
 
 
 def cadastrar_restaurante():
+    """Essa função é responsavel por cadastrar um restaurante no dicionario de dados
+    Input:
+    - nome do restaurante
+    - categoria do restaurante
+    
+    Output:
+    - novo restaurante no dicionario de dados
+    """
     subtitulo("Cadastrando restaurante")
     nome_do_restaurante = input("digite o nome do restaurante..: ")
     categoria_do_restaurante = input(f"digite a categoria do restaurante {nome_do_restaurante}..: ")
@@ -59,6 +79,10 @@ def cadastrar_restaurante():
 
 
 def listar_restaurantes():
+    """Essa função é responsavel por listar os restaurantes presentes no dicionario de dados
+    Output:
+    - lista de restaurantes, suas categorias e estado de ativação
+    """
     subtitulo("Listando restaurantes")
     print(f"{"- NOME".ljust(17)} | {"CATEGORIA".ljust(15)} | {"ESTADO".ljust(15)}")
     print("-" * 49)
@@ -72,6 +96,13 @@ def listar_restaurantes():
 
 
 def alternar_estado_restaurante():
+    """Essa função é responsavel por alternar o estados dos restaurantes entre ativo ou não
+    input:
+    - nome do restaurante
+    
+    output:
+    - estado do restaurante invertido(ativado -> desativado e vice-versa)
+    """
     subtitulo("Alternando estado dos restaurantes")
     nome_restaurante = input("Nome do restaurante a ser ativado/desativado..:")
     restaurante_encontrado = False
@@ -92,6 +123,13 @@ def alternar_estado_restaurante():
 
 
 def escolher_opcao():
+    """Essa função é responsavel por receber a escolha do usuario sobre qual submenu abrir
+    input:
+    - opção desejada
+    
+    output:
+    - submenu relacionado a opção desejada
+    """
     try:
         opcao_escolhida = int(input("Escolha uma opção..: "))
         #opcao_escolhida = int(opcao_escolhida)
@@ -124,10 +162,12 @@ def escolher_opcao():
 
 
 def main():
+    """Essa é a função main do nosso aplicativo"""
     os.system("cls")
     exibir_logo()
     exibir_opcoes()
     escolher_opcao()
     
 if __name__ == "__main__":
+    """não faço ideia do que essa função faz"""
     main()
