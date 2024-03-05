@@ -20,8 +20,6 @@ if response.status_code == 200:
             "price": item["price"],
             "description": item["description"]
         })
-
-
 else:
     print(f"o erro foi: {response.status_code}") #imprime qualquer codigo que nao o de sucesso
 
